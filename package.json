@@ -1,0 +1,20 @@
+{
+  "name": "ShiningStarRegistry",
+  "version": "1.0.0",
+  "description": "Star Notary DApp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nimisha88/ShiningStarRegistry.git"
+  },
+  "author": "Nimisha Viraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nimisha88/ShiningStarRegistry/issues"
+  },
+  "homepage": "https://github.com/Nimisha88/ShiningStarRegistry#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.2",
+    "@truffle/hdwallet-provider": "^2.0.0",
+    "fs": "^0.0.1-security"
+  }
+}
