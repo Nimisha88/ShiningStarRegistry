@@ -31,6 +31,11 @@ A decentralized app (Dapp) that allows you to create, exchange, and transfer own
 
 ## Application access
 
+* ERC721
+  * Token Name: `ShiningStarRegistry`
+  * Token Symbol: `SSR`
+  * Ropsten Token Address: `0x88af25Be3fde4Ff4bec032155Cb4f55f79d5Fea2`
+
 * **Local Development Network**: To run the application in Development Network:
   * Open terminal, `cd` to main application folder and run `truffle develop` (Should give you 10 accounts along with mnemonic).
   * `truffle(develop)>` must show at the start of the line. Run command `compile`.
