@@ -38,6 +38,13 @@ body::before {
   z-index: -100;
 }
 
+.changeAccount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2%;
+}
+
 .container {
   flex: 1 1 0;
   margin: 5rem 0;
@@ -81,7 +88,7 @@ body::before {
   /* border: 1px green solid; */
 }
 
-.cta input[type="button"] {
+.cta input[type="button"], #switchAccount {
    background: #3D94F6;
    background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
    background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
@@ -95,7 +102,7 @@ body::before {
    font-family: Verdana;
    font-weight: bold;
    font-size: 14px;
-   padding: 3%;
+   padding: 1rem;
    border: solid #337FED 1px;
    text-decoration: none;
    display: inline-block;
@@ -103,7 +110,7 @@ body::before {
    text-align: center;
 }
 
-.cta input[type="button"]:hover {
+.cta input[type="button"]:hover, #switchAccount:hover {
    border: solid #337FED 1px;
    background: #3D94F6;
    background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);

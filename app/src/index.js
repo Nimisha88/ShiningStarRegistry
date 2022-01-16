@@ -6,6 +6,7 @@ import appIcon from './assets/icon.png';
 const App = {
   web3: null,
   account: null,
+  altAccount: null,
   meta: null,
 
   start: async function() {
@@ -16,6 +17,7 @@ const App = {
       // Get Accounts
       const accounts = await web3.eth.getAccounts();
       this.account = accounts[0];
+      this.altAccount = accounts[1];
       // console.log(this.account);
 
       // Get Contract Instance
@@ -35,6 +37,13 @@ const App = {
     catch (error) {
       console.error("Could not connect to contract or chain.");
     }
+  },
+
+  switchAccount: function() {
+    let currentAccount = this.account;
+    this.account = this.altAccount;
+    this.altAccount =  currentAccount;
+    alert(`Account switched to ${this.account}`);
   },
 
   setStatus: function(message) {
