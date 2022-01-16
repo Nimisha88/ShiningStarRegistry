@@ -12,27 +12,30 @@ const App = {
   start: async function() {
     const { web3 } = this;
     try {
-      // console.log(web3);
-
       // Get Accounts
       const accounts = await web3.eth.getAccounts();
       this.account = accounts[0];
       this.altAccount = accounts[1];
-      // console.log(this.account);
 
       // Get Contract Instance
       const networkId = await web3.eth.net.getId();
       const deployedNetwork = starNotaryArtifact.networks[networkId];
-      // console.log(networkId);
-      // console.log(starNotaryArtifact);
-      // console.log(deployedNetwork);
 
-      this.meta = new web3.eth.Contract(
-        starNotaryArtifact.abi,
-        deployedNetwork.address,
-        // {from: this.account, gasPrice: 20000000, gas: 30000}
-        {from: this.account}
-      );
+      console.log(`Network ID: ${networkId}`);
+      if (networkId == 3) { // For Ropsten
+        this.meta = new web3.eth.Contract(
+                          starNotaryArtifact.abi,
+                          deployedNetwork.address,
+                          {from: this.account, gasPrice: 200000000, gas: 30000}
+                        );
+      }
+      else { // For Truffle Develop
+        this.meta = new web3.eth.Contract(
+                          starNotaryArtifact.abi,
+                          deployedNetwork.address,
+                          {from: this.account}
+                        );
+      }
     }
     catch (error) {
       console.error("Could not connect to contract or chain.");
@@ -40,6 +43,10 @@ const App = {
   },
 
   switchAccount: function() {
+    if(this.altAccount === undefined) {
+      alert(`No alternate account to switch to!`);
+      return;
+    }
     let currentAccount = this.account;
     this.account = this.altAccount;
     this.altAccount =  currentAccount;
