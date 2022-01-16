@@ -2,6 +2,11 @@
 A decentralized app (Dapp) that allows you to create, exchange, and transfer ownership of unique star token (CryptoStar) on the Ethereum Blockchain Testnet (Ropsten) using smart contracts and the non-fungible (ERC721) token standard.
 
 
+## Application Preview - Exchange Star
+
+https://user-images.githubusercontent.com/29170466/149681245-4c5d5bb3-37f2-4c58-a26d-cdbc469fee91.mov
+
+
 ## Software, Firmware and Hardware
 
 * HTML5, CSS3, JavaScript(ES5 & ES6)
