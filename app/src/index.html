@@ -24,32 +24,32 @@
           <h2>Welcome to Shining Star Registry!</h2>
         </div>
         <div class="cta">
-          <input type="button" value="Create Star" onclick="App.getCreateStarDetails()">
+          <input type="button" value="Create Star" onclick="App.getMenuOption('create')">
         </div>
         <div class="cta">
-          <input type="button" id="lookupStar" value="Get Star Info">
+          <input type="button" id="lookupStar" value="Get Star Info" onclick="App.getMenuOption('lookup')">
         </div>
         <div class="cta">
-          <input type="button" id="exchangeStar" value="Exchange Star">
+          <input type="button" id="exchangeStar" value="Exchange Star" onclick="App.getMenuOption('exchange')">
         </div>
         <div class="cta">
-          <input type="button" id="transferStar" value="Transfer Star">
+          <input type="button" id="transferStar" value="Transfer Star" onclick="App.getMenuOption('transfer')">
         </div>
       </div>
       <div id="cta-detail" class="cta-detail hideEle">
         <div class="cta">
-          <input type="text" id="starName" placeholder="Name of Star">
+          <input type="text" id="input1">
         </div>
         <div class="cta">
-          <input type="text" id="starId" placeholder="ID of Star">
+          <input type="text" id="input2">
         </div>
         <div class="cta">
-          <input type="button" id="createStar" value="Create Star" onclick="App.createStar()">
+          <input type="button" id="doAction">
         </div>
       </div>
       <div id="cta-status" class="cta-status hideEle">
         <div class="cta">
-          <p id="status"></p>
+          <div id="status"></div>
         </div>
         <div class="cta">
           <input type="button" id="goBack" value="Go Back" onclick="App.showMenu()">
